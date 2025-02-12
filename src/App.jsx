@@ -3,6 +3,7 @@ import Header from "./components/Header"
 import HomePage from "./pages/HomePage"
 import GamesPage from "./pages/GamesPage"
 import GameDetailPage from "./pages/GameDetailPage"
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           </Routes>
         </main>
       </div>
+      <footer>
+        <Footer />
+      </footer>
     </Router>
   )
 }
