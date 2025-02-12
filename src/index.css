@@ -1,0 +1,19 @@
+/*
+  This is a placeholder for src/index.css.  The provided codebase doesn't
+  directly reference any specific styles within this file.  A minimal
+  stylesheet is provided for basic styling consistency.  You should replace
+  this with your actual stylesheet.
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
