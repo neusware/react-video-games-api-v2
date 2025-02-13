@@ -106,6 +106,8 @@ const HomePage = () => {
 
           {/* mapeo del estado y generación de componentes recorriendolo, ternaria */}
           {popularGames.length > 0 ? (
+
+            // le paso las props al componente según mapeo
             popularGames.map((game) => (
               <GameCard id={game.id} name={game.name} background_image={game.background_image} />
             ))
