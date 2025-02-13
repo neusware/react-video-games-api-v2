@@ -1,6 +1,6 @@
 # Video Games API
 
-Este es un proyecto de una aplicación web desarrollada con React que utiliza la API de RAWG para mostrar información y reseñas de videojuegos. La aplicación permite a los usuarios buscar juegos, ver detalles de juegos populares y explorar una biblioteca de juegos.
+Este es un proyecto de una aplicación web desarrollada con React que utiliza la API de RAWG para mostrar información y reseñas de videojuegos. La aplicación permite a los usuarios buscar juegos, ver detalles de juegos populares y explorar una biblioteca de juegos, se encuentra desplegada en [Netlify](https://incredible-flan-9c40aa.netlify.app/).
 
 ## Funcionalidades
 
