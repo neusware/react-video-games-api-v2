@@ -61,7 +61,7 @@ const Footer = () => {
                 type="email"
                 placeholder="Your email"
                 className="px-4 py-2 w-full rounded-l-full focus:outline-none text-black"
-              />q
+              />
               <button
                 type="submit"
                 className="bg-red-600 text-white px-4 py-2 rounded-r-full hover:bg-red-700 transition duration-300"
