@@ -10,7 +10,7 @@ const Footer = () => {
             <p className="text-md">Wiki desarrollada con React y RAWG para información y reviews de videojuegos.</p>
           </div>
           <div>
-            <h3 className="text-xl font-bold mb-4 text-red-400">Quick Links</h3>
+            <h3 className="text-xl font-bold mb-4 text-red-400">Enlaces</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="hover:text-red-400 transition duration-300">
