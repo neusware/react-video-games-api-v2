@@ -3,7 +3,10 @@ import Header from "./components/Header"
 import HomePage from "./pages/HomePage"
 import GamesPage from "./pages/GamesPage"
 import GameDetailPage from "./pages/GameDetailPage"
+import GamesByPage from "./pages/GamesByPage"
 import Footer from "./components/Footer"
+import PublisherPage from "./pages/PublisherPage"
+import PublishersPage  from "./pages/PublishersPage"
 
 //componente principal que renderiza main.jsx | hace uso de reactrouter para la navegación entre páginas por cambio en url sin recarga SPA
 function App() {
@@ -30,11 +33,19 @@ function App() {
 
             <Route path="/games" element={<GamesPage />} />
 
-            {/* :id es un parametro que se pasa de un link, recoge la ruta la URL  y vuelve a recoger el componente como prop*/}
+            {/* :id/type es un parámetro que se pasa de un link, recoge la ruta la URL  y vuelve a recoger el componente como prop*/}
             <Route path="/game/:id" element={<GameDetailPage />} />
+
+            <Route path="/games/:type/:id" element={<GamesByPage />} />
+
+            <Route path="/publisher/:id" element={<PublisherPage />} />
+
+            <Route path="/publishers" element={<PublishersPage />} />
+
           </Routes>
         
         </main>
+
       </div>
       
       {/*elemento pie de pagina +  componente pie de página */}

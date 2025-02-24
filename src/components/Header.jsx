@@ -24,6 +24,9 @@ function Header() {
               Biblioteca
             </Link>
           </li>
+          <li>
+            <Link to="/publishers" className="hover:text-gray-300">Editores</Link>
+          </li>
         </ul>
       </nav>
     </header>

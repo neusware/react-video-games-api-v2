@@ -29,6 +29,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/publishers" className="hover:text-red-400 transition duration-300">
+                  Editores
+                </Link>
+              </li>
+              <li>
                 <Link to="#" className="hover:text-red-400 transition duration-300">
                   Sobre nosotros
                 </Link>
