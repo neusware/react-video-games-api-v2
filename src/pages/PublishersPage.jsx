@@ -44,7 +44,7 @@ function PublishersPage() {
                     >
                         <div className="p-4">
                             <h3 className="text-lg font-bold text-gray-800 mb-2">{publisher.name}</h3>
-                            <p className="text-sm text-gray-600">Games count: {publisher.games_count}</p>
+                            <p className="text-sm text-gray-600">Títulos {publisher.games_count}</p>
                         </div>
                     </Link>
                 ))}
