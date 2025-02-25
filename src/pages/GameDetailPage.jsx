@@ -5,12 +5,9 @@ import { fetchGameDetails } from "../api"
 //componente página de detalle de juego
 const GameDetailPage = () => {
   
-  //hooks
+  //--hooks
   const { id } = useParams()
-  
   const [game, setGame] = useState(null)
-  
-
   const [showDescription, setShowDescription] = useState(false)
 
   //useEffect para obtener los detalles del juego al montar componente

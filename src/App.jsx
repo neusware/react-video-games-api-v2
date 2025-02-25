@@ -8,6 +8,8 @@ import Footer from "./components/Footer"
 import PublisherPage from "./pages/PublisherPage"
 import PublishersPage  from "./pages/PublishersPage"
 
+//todo Each child in a list should have a unique "key" prop. Check the render method of `HomePage`.
+
 //componente principal que renderiza main.jsx | hace uso de reactrouter para la navegación entre páginas por cambio en url sin recarga SPA
 function App() {
   
@@ -25,6 +27,7 @@ function App() {
 
         <main>
 
+
           {/* Defino las rutas | path=x -> (renderiza) -> componente x*/}
           <Routes>
 
@@ -36,6 +39,7 @@ function App() {
             {/* :id/type es un parámetro que se pasa de un link, recoge la ruta la URL  y vuelve a recoger el componente como prop*/}
             <Route path="/game/:id" element={<GameDetailPage />} />
 
+            {/* Nuevas rutas, parametrizadas para los props */}
             <Route path="/games/:type/:id" element={<GamesByPage />} />
 
             <Route path="/publisher/:id" element={<PublisherPage />} />

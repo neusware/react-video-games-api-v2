@@ -11,7 +11,7 @@ function Header() {
       <nav className="container mx-auto flex justify-between items-center">
         {/* Links con el Link de react-router, to (raíz). Funciona como un anchor, aunque tiene otra naturaleza, evita recargar la página */}
         <Link to="/" className="text-2xl font-bold">
-          Wiki de títulos
+          DIW - Wiki de videojuegos
         </Link>
         <ul className="flex space-x-4">
           <li>
