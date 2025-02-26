@@ -1,5 +1,6 @@
 // Importo el componente Link de react-router-dom para poder navegar entre las páginas cambiando la ruta del explorador
 import { Link } from "react-router-dom"
+import CircularText from "./CircularText"
 
 // Declaro el componente
 function Header() {
@@ -10,8 +11,9 @@ function Header() {
     <header className="bg-black text-red-400 p-4">
       <nav className="container mx-auto flex justify-between items-center">
         {/* Links con el Link de react-router, to (raíz). Funciona como un anchor, aunque tiene otra naturaleza, evita recargar la página */}
-        <Link to="/" className="text-2xl font-bold">
-          DIW - Wiki de videojuegos
+        <Link to="/" className="flex items-center">
+          <CircularText text="DIW**REACT**API**" onHover="speedUp" spinDuration={20} className="w-16 h-16 mr-2 ml-2 mb-1 mt-1" />
+          {/* <span className="text-2xl font-bold">Wiki de títulos</span> */}
         </Link>
         <ul className="flex space-x-4">
           <li>

@@ -13,7 +13,30 @@
   padding: 0;
 }
 
-body {
-  font-family: sans-serif;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.squares-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.content-container {
+  flex: 1;
+  z-index: 1;
+  position: relative;
+}

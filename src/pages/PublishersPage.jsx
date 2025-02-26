@@ -24,9 +24,11 @@ function PublishersPage() {
                 
                 //setteo segun retorno
                 setPublishers(data.results || [])
+                console.log("Datos recibidos:" + data.results)
 
                 //setteo con el calculo para paginar en funcion de los elementos retornados
                 setTotalPages(Math.ceil(data.count / 20))
+                console.log("Conteo" + data.count)
             })
         }, 300)//delay
 
@@ -36,7 +38,26 @@ function PublishersPage() {
 
     //delcarando metodo para settear estado paginación en función de elemento
     const handlePageChange = (newPage) => {
+        console.log("cambiando a la nueva página" + newPage)
         setCurrentPage(newPage)
+    }
+
+    //metodo para calcular el rango de paginas a mostrar
+    const getPageNumbers = () => {
+        const totalNumbers = 10; // Número máximo de páginas a mostrar
+        const half = Math.floor(totalNumbers / 2);
+        let start = Math.max(1, currentPage - half);
+        let end = Math.min(totalPages, currentPage + half);
+
+        if (currentPage - half < 1) {
+            end = Math.min(totalPages, end + (half - (currentPage - 1)));
+        }
+
+        if (currentPage + half > totalPages) {
+            start = Math.max(1, start - ((currentPage + half) - totalPages));
+        }
+
+        return Array.from({ length: end - start + 1 }, (_, i) => start + i);
     }
 
     //retorno los elementos html que conforman el componente
@@ -71,7 +92,7 @@ function PublishersPage() {
             {/* paginación, si estado >1 creo array con el totalpages y renderizo elementos btn, su estilo en función del estado */}
             {totalPages > 1 && (
                 <div className="mt-8 flex justify-center">
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    {getPageNumbers().map((page) => (
                         <button
                             key={page}
                             onClick={() => handlePageChange(page)}
@@ -90,4 +111,3 @@ function PublishersPage() {
 
 //exporto
 export default PublishersPage
-
